@@ -67,15 +67,17 @@
             {{ $footballcamp->price }} TND
         </button>
         <br><br><br>
-        <form class="row g-3">
+        <form class="row g-3" action="{{ url('booking') }}" method="POST">
+            @csrf
             <div class="col-auto">
                 <label for="name" class="visually-hidden">Nom Complet</label>
-                <input type="text" class="form-control" id="name" placeholder="Nom Complet">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Nom Complet" required>
             </div>
             <div class="col-auto">
                 <label for="email" class="visually-hidden">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
             </div>
+            <input type="hidden" name="offre" value="{{ $footballcamp->id }}">
             <br>
             <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3">Réserver</button>

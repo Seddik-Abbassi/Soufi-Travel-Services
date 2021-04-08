@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,10 @@ Route::get('/footballcamps',[\App\Http\Controllers\FootballcampController::class
 
 Route::get('/footballcamp/{id}',[\App\Http\Controllers\FootballcampController::class, 'show'])->name('footballcamp');
 
+Route::post('booking',[\App\Http\Controllers\FootballcampController::class, 'booking'])->name('booking');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get("email", [MailController::class, "email"])->name("email");
