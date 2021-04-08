@@ -23,17 +23,4 @@ class MainController extends Controller
     {
         return view('about');
     }
-
-    public function footballcamps()
-    {
-        $footballcamps = Footballcamp::get();
-        return view('footballcamps', compact('footballcamps'));
-    }
-
-    public function footballcamp($id)
-    {
-        $footballcamp = Footballcamp::find($id);
-        return View::make("footballcamp", compact('footballcamp'));
-    }
-
 }

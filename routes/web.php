@@ -19,10 +19,9 @@ Route::get('/contact',[\App\Http\Controllers\MainController::class, 'contact'])-
 
 Route::get('/about',[\App\Http\Controllers\MainController::class, 'about'])->name('about');
 
-Route::get('/footballcamps',[\App\Http\Controllers\MainController::class, 'footballcamps'])->name('footballcamps');
+Route::get('/footballcamps',[\App\Http\Controllers\FootballcampController::class, 'index'])->name('footballcamps');
 
-Route::get('/footballcamp/{id}',[\App\Http\Controllers\MainController::class, 'footballcamp'])->name('footballcamp');
-
+Route::get('/footballcamp/{id}',[\App\Http\Controllers\FootballcampController::class, 'show'])->name('footballcamp');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
