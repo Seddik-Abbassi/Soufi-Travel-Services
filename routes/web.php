@@ -26,8 +26,14 @@ Route::get('/footballcamp/{id}',[\App\Http\Controllers\FootballcampController::c
 
 Route::post('booking',[\App\Http\Controllers\FootballcampController::class, 'booking'])->name('booking');
 
+Route::get('/bateaux',[\App\Http\Controllers\BateauxController::class, 'index'])->name('bateaux');
+
+Route::post('booking-boat',[\App\Http\Controllers\BateauxController::class, 'booking'])->name('booking-boat');
+
+Route::post('contactform',[\App\Http\Controllers\MainController::class, 'contactform'])->name('contactform');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get("email", [MailController::class, "email"])->name("email");
+//Route::get("email", [MailController::class, "email"])->name("email");

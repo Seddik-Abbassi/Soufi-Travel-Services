@@ -551,7 +551,7 @@ figure {
     width: 40%;
   }
 }
-.tabulation input[type="text"] {
+.tabulation input[type="text"], input[type="email"] {
   background: rgba(0, 0, 0, 0.05);
   border: none;
   box-shadow: none;
@@ -1209,7 +1209,7 @@ div.cs-select span {
 
 #fh5co-testimonial {
   position: relative;
-  background: #00AD7C;
+  background: #7fd6ff;
 }
 #fh5co-testimonial .fh5co-heading h2 {
   color: white;
@@ -1611,7 +1611,7 @@ div.cs-select span {
 }
 
 #footer {
-  background: #393e46;
+  background: #9c9c9c;
   padding: 60px 0 40px;
 }
 #footer p {

@@ -1,7 +1,6 @@
 @extends('layout.layout')
 
 @section('content')
-
     <div class="fh5co-hero">
         <div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/clear-air-fly-fantastic-travel.jpg);">
             <div class="desc">
@@ -12,188 +11,85 @@
 
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active">
-                                        <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Vol</a>
-                                    </li>
                                     <li role="presentation">
                                         <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Bateau</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">Football Camp</a>
                                     </li>
                                 </ul>
 
                                 <!-- Tab panes -->
                                 <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="flights">
+                                    <div role="tabpanel" class="tab-pane active" id="hotels">
                                         <div class="row">
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <div class="input-field">
-                                                    <label for="from">De</label>
-                                                    <input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+                                            <form action="{{ url('booking-boat') }}" method="POST">
+                                                @csrf
+                                                <div class="col-xxs-12 col-xs-6 mt">
+                                                    <div class="input-field">
+                                                        <label for="name">Nom Complet</label>
+                                                        <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom complet"/>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <div class="input-field">
-                                                    <label for="from">Vers</label>
-                                                    <input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan"/>
+                                                <div class="col-xxs-12 col-xs-6 mt">
+                                                    <div class="input-field">
+                                                        <label for="email">Email</label>
+                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Votre email"/>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt alternate">
-                                                <div class="input-field">
-                                                    <label for="date-start">Arrivée</label>
-                                                    <input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
+                                                <div class="col-xxs-12 col-xs-6 mt">
+                                                    <div class="input-field">
+                                                        <label for="from-place">De</label>
+                                                        <input type="text" class="form-control" name="from" id="from-place" placeholder="Los Angeles, USA"/>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt alternate">
-                                                <div class="input-field">
-                                                    <label for="date-end">Départ</label>
-                                                    <input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+                                                <div class="col-xxs-12 col-xs-6 mt">
+                                                    <div class="input-field">
+                                                        <label for="to-place">Vers</label>
+                                                        <input type="text" class="form-control" name="to" id="to-place" placeholder="Tokyo, Japan"/>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <section>
-                                                    <label for="class">Adultes</label>
-                                                    <select class="cs-select cs-skin-border">
-                                                        @for($i = 1; $i<11; $i++)
-                                                            <option value="{{$i}}">{{$i}}</option>
-                                                        @endfor
-                                                    </select>
-                                                </section>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <section>
-                                                    <label for="class">Enfants</label>
-                                                    <select class="cs-select cs-skin-border">
-                                                        @for($i = 1; $i<11; $i++)
-                                                            <option value="{{$i}}">{{$i}}</option>
-                                                        @endfor
-                                                    </select>
-                                                </section>
-                                            </div>
-                                            <div class="col-xs-12">
-                                                <input type="submit" class="btn btn-primary btn-block" value="Valider">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div role="tabpanel" class="tab-pane" id="hotels">
-                                        <div class="row">
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <div class="input-field">
-                                                    <label for="from">De</label>
-                                                    <input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+                                                <div class="col-xxs-12 col-xs-6 mt alternate">
+                                                    <div class="input-field">
+                                                        <label for="date-start">Arrivée</label>
+                                                        <input type="text" class="form-control" name="datestart" id="date-start" placeholder="mm/dd/yyyy"/>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <div class="input-field">
-                                                    <label for="from">Vers</label>
-                                                    <input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan"/>
+                                                <div class="col-xxs-12 col-xs-6 mt alternate">
+                                                    <div class="input-field">
+                                                        <label for="date-end">Départ</label>
+                                                        <input type="text" class="form-control" name="dateend" id="date-end" placeholder="mm/dd/yyyy"/>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt alternate">
-                                                <div class="input-field">
-                                                    <label for="date-start">Arrivée</label>
-                                                    <input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
+                                                <div class="col-xxs-12 col-xs-6 mt">
+                                                    <section>
+                                                        <label for="adult">Adultes</label>
+                                                        <select class="cs-select cs-skin-border" name="adult">
+                                                            @for($i = 1; $i<11; $i++)
+                                                                <option value="{{$i}}">{{$i}}</option>
+                                                            @endfor
+                                                        </select>
+                                                    </section>
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt alternate">
-                                                <div class="input-field">
-                                                    <label for="date-end">Départ</label>
-                                                    <input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+                                                <div class="col-xxs-12 col-xs-6 mt">
+                                                    <section>
+                                                        <label for="child">Enfants</label>
+                                                        <select class="cs-select cs-skin-border" name="child">
+                                                            @for($i = 0; $i<11; $i++)
+                                                                <option value="{{$i}}">{{$i}}</option>
+                                                            @endfor
+                                                        </select>
+                                                    </section>
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <section>
-                                                    <label for="class">Adultes</label>
-                                                    <select class="cs-select cs-skin-border">
-                                                        @for($i = 1; $i<11; $i++)
-                                                            <option value="{{$i}}">{{$i}}</option>
-                                                        @endfor
-                                                    </select>
-                                                </section>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <section>
-                                                    <label for="class">Enfants</label>
-                                                    <select class="cs-select cs-skin-border">
-                                                        @for($i = 1; $i<11; $i++)
-                                                            <option value="{{$i}}">{{$i}}</option>
-                                                        @endfor
-                                                    </select>
-                                                </section>
-                                            </div>
-                                            <div class="col-xs-12">
-                                                <input type="submit" class="btn btn-primary btn-block" value="Valider">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div role="tabpanel" class="tab-pane" id="packages">
-                                        <div class="row">
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <div class="input-field">
-                                                    <label for="from">De</label>
-                                                    <input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+                                                <div class="col-xs-12">
+                                                    <input type="submit" class="btn btn-primary btn-block" value="Valider">
                                                 </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <div class="input-field">
-                                                    <label for="from">Destination</label>
-                                                    <input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan"/>
-                                                </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt alternate">
-                                                <div class="input-field">
-                                                    <label for="date-start">Arrivée</label>
-                                                    <input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
-                                                </div>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt alternate">
-                                                <div class="input-field">
-                                                    <label for="date-end">Départ</label>
-                                                    <input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 mt">
-                                                <section>
-                                                    <label for="class">Chambres</label>
-                                                    <select class="cs-select cs-skin-border">
-                                                        @for($i = 1; $i<11; $i++)
-                                                            <option value="{{$i}}">{{$i}}</option>
-                                                        @endfor
-                                                    </select>
-                                                </section>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <section>
-                                                    <label for="class">Adultes</label>
-                                                    <select class="cs-select cs-skin-border">
-                                                        @for($i = 1; $i<11; $i++)
-                                                            <option value="{{$i}}">{{$i}}</option>
-                                                        @endfor
-                                                    </select>
-                                                </section>
-                                            </div>
-                                            <div class="col-xxs-12 col-xs-6 mt">
-                                                <section>
-                                                    <label for="class">Enfants</label>
-                                                    <select class="cs-select cs-skin-border">
-                                                        @for($i = 1; $i<11; $i++)
-                                                            <option value="{{$i}}">{{$i}}</option>
-                                                        @endfor
-                                                    </select>
-                                                </section>
-                                            </div>
-                                            <div class="col-xs-12">
-                                                <input type="submit" class="btn btn-primary btn-block" value="Search Packages">
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
+
                         </div>
+
                         <div class="desc2 animate-box">
                             <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1" style="text-align: center">
                                 <h2>Voyager, c’est découvrir</h2>
@@ -201,11 +97,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row" style="font-size: 1.7em !important; text-align: center;margin-top: 50px">
+                        <a href="{{ route('bateaux') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">Explorer nos voyages en bateau</a>
+                        <a href="{{ route('footballcamps') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">Explorer nos Stage Football</a>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
+
+
+
+
 
 <div id="fh5co-tours" class="fh5co-section-gray">
     <div class="container">
@@ -243,37 +147,67 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
+                <div href="#"><img src="../images/business-trip.jpg" alt="Business Trip" class="img-responsive" width="395px" height="300px">
+                    <div class="desc">
+                        <span></span>
+                        <h3>Business</h3>
+                        <a class="btn btn-primary btn-outline" href="#">Explorer<i class="icon-arrow-right22"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
+                <div href="#"><img src="../images/plage-trip.jpg" alt="Plage trip" class="img-responsive" width="395px" height="300px">
+                    <div class="desc">
+                        <span></span>
+                        <h3>Plage</h3>
+                        <a class="btn btn-primary btn-outline" href="#">Explorer<i class="icon-arrow-right22"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
+                <div href="#"><img src="../images/sahara-trip.jpg" alt="Sahara trip" class="img-responsive" width="395px" height="300px">
+                    <div class="desc">
+                        <span></span>
+                        <h3>Sahara</h3>
+                        <a class="btn btn-primary btn-outline" href="#">Explorer<i class="icon-arrow-right22"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div id="fh5co-footcamp" class="fh5co-section-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                    <h3>Nos Offres Football Camp</h3>
-                </div>
-            </div>
-            <div class="row">
-                @for($id=1;$id<4;$id++)
-                    <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-                        <div href="#"><img src="images/place-1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <div class="desc">
-                                <span></span>
-                                <h3>Offre {{ $id }}</h3>
-                                <span>3 Nuits</span>
-                                <span class="price">1,200 TND</span>
-                                <a class="btn btn-primary btn-outline" href="{{ route('footballcamp', $id) }}">Explorer<i class="icon-arrow-right22"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                @endfor
-                <div class="col-md-12 text-center animate-box">
-                    <p><a class="btn btn-primary btn-outline btn-lg" href="{{ route('footballcamps') }}">Tous les offres&nbsp;<i class="icon-arrow-right22"></i></a></p>
-                </div>
-            </div>
+{{--<div id="fh5co-footcamp" class="fh5co-section-gray">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">--}}
+{{--                    <h3>Nos Offres Football Camp</h3>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                @foreach($footballcamps as $footballcamp )--}}
+{{--                    <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">--}}
+{{--                        <div href="#"><img src="{{ $footballcamp->thumbnail }}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">--}}
+{{--                            <div class="desc">--}}
+{{--                                <span></span>--}}
+{{--                                <h3>{{ $footballcamp->title }}</h3>--}}
+{{--                                <span>{{ $footballcamp->begin_date }} -> {{ $footballcamp->end_date }}</span>--}}
+{{--                                <span class="price">{{ $footballcamp->price }} TND</span>--}}
+{{--                                <span style="font-weight: bold">{{ $footballcamp->destination }}</span>--}}
+{{--                                <a class="btn btn-primary btn-outline" href="{{ route('footballcamp', $footballcamp->id) }}">Explorer<i class="icon-arrow-right22"></i></a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                @endforeach--}}
+{{--                <div class="col-md-12 text-center animate-box">--}}
+{{--                    <p><a class="btn btn-primary btn-outline btn-lg" href="{{ route('footballcamps') }}">Tous les offres&nbsp;<i class="icon-arrow-right22"></i></a></p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-        </div>
-    </div>
+{{--        </div>--}}
+{{--    </div>--}}
     <br><br><br><br>
 <div id="fh5co-destination">
     <div class="tour-fluid">

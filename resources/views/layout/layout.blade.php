@@ -79,7 +79,6 @@
                 </div>
             </div>
         </header>
-
         <!-- end:header-top -->
 
         @yield('content')

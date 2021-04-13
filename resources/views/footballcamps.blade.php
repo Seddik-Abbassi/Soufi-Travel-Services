@@ -11,8 +11,7 @@
                 </div>
             </div>
             <div class="row row-bottom-padded-md">
-{{--                @for($id=1;$id<7;$id++)--}}
-                    @foreach($footballcamps as $footballcamp )
+                @foreach($footballcamps as $footballcamp )
                 <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
                     <div href="#"><img src="{{ $footballcamp->thumbnail }}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
                         <div class="desc">
@@ -26,7 +25,6 @@
                     </div>
                 </div>
                 @endforeach
-{{--                @endfor--}}
             </div>
         </div>
     </div>

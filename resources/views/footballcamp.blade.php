@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-12">
                             <button type="button" class="btn btn-success" style="font-size: 1.5em" >
-                                {{ $footballcamp->price }} TND
+                                <span style="color: #0b0b0b;font-size: 0.6em">à partir de</span>&nbsp;{{ $footballcamp->price }} TND
                             </button>
                         </div>
                         <div class="col-md-12" style="margin-top: 15px">
@@ -64,7 +64,7 @@
         </button>
         <br><br><br>
         <button type="button" class="btn btn-success" style="font-size: 1.5em" >
-            {{ $footballcamp->price }} TND
+            <span style="color: #0b0b0b;font-size: 0.6em">à partir de</span>&nbsp;{{ $footballcamp->price }} TND
         </button>
         <br><br><br>
         <form class="row g-3" action="{{ url('booking') }}" method="POST">
