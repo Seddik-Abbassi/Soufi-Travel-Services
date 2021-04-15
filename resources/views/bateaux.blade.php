@@ -20,7 +20,7 @@
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="hotels">
                                         <div class="row">
-                                            <form action="{{ url('booking-boat') }}" method="POST">
+                                            <form action="{{ url(app()->getLocale(),'/booking-boat') }}" method="POST">
                                                 @csrf
                                                 <div class="col-xxs-12 col-xs-6 mt">
                                                     <div class="input-field">

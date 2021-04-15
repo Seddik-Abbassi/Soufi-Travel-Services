@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <form action="{{ route('contactform') }}" method="POST">
+                        <form action="{{ url(app()->getLocale(),'/contactform') }}" method="POST">
                         @csrf
                         <div class="col-md-6">
                             <div class="form-group">

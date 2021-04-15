@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ app()->getLocale() }}> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{ app()->getLocale() }}> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="{{ app()->getLocale() }}> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ app()->getLocale() }}> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,13 +67,15 @@
         <header id="fh5co-header-section" class="sticky-banner">
             <div class="container">
                 <div class="nav-header">
-                    <a href="{{ route('home') }}"><img src="{{ asset('images/logo2.png') }}" alt="" width="200px"></a>
+                    <a href="{{ url(app()->getLocale(),'') }}"><img src="{{ asset('images/logo2.png') }}" alt="" width="200px"></a>
                     <!-- START #fh5co-menu-wrap -->
                     <nav id="fh5co-menu-wrap" role="navigation">
                         <ul class="sf-menu" id="fh5co-primary-menu" style="align-content: center">
-                            <li class="active"><a href="{{ route('home') }}">Accueil</a></li>
-                            <li><a href="{{ route('about') }}">A propos</a></li>
-                            <li><a href="{{ route('contact') }}">Contact</a></li>
+                            <li class="active"><a href="{{ url(app()->getLocale(),'') }}">@lang('message.home')</a></li>
+                            <li><a href="{{ url(app()->getLocale(),'about') }}">@lang('message.about')</a></li>
+                            <li><a href="{{ url(app()->getLocale(),'contact') }}">@lang('message.contact')</a></li>
+                            <li style="padding-left: 100px"><a href="{{ url('fr') }}">fr</a></li>
+                            <li><a href="{{ url('en') }}">en</a></li>
                         </ul>
                     </nav>
                 </div>

@@ -7,13 +7,14 @@ use http\Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use PHPMailer\PHPMailer\PHPMailer;
+use App\Http\Middleware\SetLocale;
 
 class MainController extends Controller
 {
     public function index()
     {
         $footballcamps = Footballcamp::all()->take(3);
-        return view('home', compact('footballcamps'));
+        return view('home',compact('footballcamps'));
     }
 
     public function contact()
