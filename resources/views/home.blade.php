@@ -92,8 +92,8 @@
 
                         <div class="desc2 animate-box">
                             <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1" style="text-align: center">
-                                <h2>Voyager, c’est découvrir</h2>
-                                <h2>Voyager, à son meilleur</h2>
+                                <h2>@lang('message.slidermsg1')</h2>
+                                <h2>@lang('message.slidermsg2')</h2>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                <h3>Destination par type de voyages</h3>
+                <h3>@lang('message.messagepertriptype')</h3>
             </div>
         </div>
         <div class="row">
