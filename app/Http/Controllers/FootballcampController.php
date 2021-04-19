@@ -20,6 +20,7 @@ class FootballcampController extends Controller
     public function index()
     {
         $footballcamps = Footballcamp::get();
+        dd($footballcamps);
         return view('footballcamps', compact('footballcamps'));
     }
 
@@ -50,7 +51,7 @@ class FootballcampController extends Controller
      * @param  $id
      * @return \Illuminate\Contracts\View\View
      */
-    public function show($id)
+    public function show($locale,$id)
     {
         $footballcamp = Footballcamp::find($id);
         return View::make("footballcamp", compact('footballcamp'));

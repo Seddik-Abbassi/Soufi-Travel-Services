@@ -67,7 +67,7 @@
         <header id="fh5co-header-section" class="sticky-banner">
             <div class="container">
                 <div class="nav-header">
-                    <a href="{{ url(app()->getLocale(),'') }}"><img src="{{ asset('images/logo2.png') }}" alt="" width="200px"></a>
+                    <a href="{{ url(app()->getLocale(),'') }}"><img src="{{ asset('images/logo2.png') }}" alt="" width="350px"></a>
                     <!-- START #fh5co-menu-wrap -->
                     <nav id="fh5co-menu-wrap" role="navigation">
                         <ul class="sf-menu" id="fh5co-primary-menu" style="align-content: center">

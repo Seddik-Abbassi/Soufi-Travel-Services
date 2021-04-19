@@ -19,7 +19,7 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
     Route::get('/contact',[\App\Http\Controllers\MainController::class, 'contact'])->name('contact');
     Route::get('/about',[\App\Http\Controllers\MainController::class, 'about'])->name('about');
     Route::get('/footballcamps',[\App\Http\Controllers\FootballcampController::class, 'index'])->name('footballcamps');
-    Route::get('/footballcamp/{id}',[\App\Http\Controllers\FootballcampController::class, 'show'])->name('footballcamp');
+    Route::get('/footballcamp/{id?}',[\App\Http\Controllers\FootballcampController::class, 'show'])->name('footballcamp');
     Route::post('booking',[\App\Http\Controllers\FootballcampController::class, 'booking'])->name('booking');
     Route::get('/bateaux',[\App\Http\Controllers\BateauxController::class, 'index'])->name('bateaux');
     Route::post('booking-boat',[\App\Http\Controllers\BateauxController::class, 'booking'])->name('booking-boat');
@@ -28,4 +28,8 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'm
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::get('/', function () {
+    return redirect(app()->getLocale());
 });
