@@ -12,7 +12,7 @@
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li role="presentation">
-                                        <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Bateau</a>
+                                        <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Ferry</a>
                                     </li>
                                 </ul>
 

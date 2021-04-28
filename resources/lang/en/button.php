@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -13,8 +12,6 @@ return [
     |
     */
 
-    'failed' => 'Ces informations d\'identification ne correspondent pas à nos enregistrements.',
-    'password' => 'Mot de passe incorrecte.',
-    'throttle' => 'Trop de tentatives de connexion. Veuillez réessayer dans :seconds seconds.',
-
+    'homebateau' => 'Explore our ferry trips.',
+    'homefootcump' => 'Explore our Football Camps.',
 ];

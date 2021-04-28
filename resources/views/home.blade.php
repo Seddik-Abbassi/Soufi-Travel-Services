@@ -98,8 +98,13 @@
                         </div>
                     </div>
                     <div class="row" style="font-size: 1.7em !important; text-align: center;margin-top: 50px">
+<<<<<<< HEAD
                         <a href="{{ url(app()->getLocale(),'bateaux') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">Explorer nos voyages en bateau</a>
                         <a href="{{ url(app()->getLocale(),'footballcamps') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">Explorer nos Stage Football</a>
+=======
+                        <a href="{{ url(app()->getLocale(),'bateaux') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">@lang('button.homebateau')</a>
+                        <a href="{{ url(app()->getLocale(),'footballcamps') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">@lang('button.homefootcump')</a>
+>>>>>>> f53aa7d6006b96d7363f23ac03237a2de14c2e9e
                     </div>
                 </div>
             </div>
