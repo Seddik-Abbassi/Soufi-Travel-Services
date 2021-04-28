@@ -50,8 +50,9 @@ class FootballcampController extends Controller
      * @param  $id
      * @return \Illuminate\Contracts\View\View
      */
-    public function show($id)
+    public function show($lang,$id)
     {
+
         $footballcamp = Footballcamp::find($id);
         return View::make("footballcamp", compact('footballcamp'));
     }

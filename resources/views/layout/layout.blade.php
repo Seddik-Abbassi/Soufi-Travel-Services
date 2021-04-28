@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Soufi Travel Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
     <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
     <meta name="author" content="FREEHTML5.CO" />
@@ -74,8 +74,9 @@
                             <li class="active"><a href="{{ url(app()->getLocale(),'') }}">@lang('message.home')</a></li>
                             <li><a href="{{ url(app()->getLocale(),'about') }}">@lang('message.about')</a></li>
                             <li><a href="{{ url(app()->getLocale(),'contact') }}">@lang('message.contact')</a></li>
-                            <li style="padding-left: 100px"><a href="{{ url('fr') }}">fr</a></li>
-                            <li><a href="{{ url('en') }}">en</a></li>
+                            <li style="padding-left: 100px"><a href="{{ url('fr') }}">FR</a></li>
+                            <li><a href="{{ url('en') }}">EN</a></li>
+                            <li><a href="{{ url('du') }}">DU</a></li>
                         </ul>
                     </nav>
                 </div>

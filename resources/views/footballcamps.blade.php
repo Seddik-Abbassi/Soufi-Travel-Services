@@ -20,7 +20,7 @@
                             <span>{{ $footballcamp->begin_date }} -> {{ $footballcamp->end_date }}</span>
                             <span class="price">{{ $footballcamp->price }} TND</span>
                             <span style="font-weight: bold">{{ $footballcamp->destination }}</span>
-                            <a class="btn btn-primary btn-outline" href="{{ url(app()->getLocale(),'/footballcamp', $footballcamp->id) }}">Explorer<i class="icon-arrow-right22"></i></a>
+                            <a class="btn btn-primary btn-outline" href="{{ url(app()->getLocale(),'footballcamp') }}/{{$footballcamp->id}}">Explorer<i class="icon-arrow-right22"></i></a>
                         </div>
                     </div>
                 </div>
