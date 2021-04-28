@@ -1,119 +1,62 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="fh5co-hero">
-        <div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/clear-air-fly-fantastic-travel.jpg);">
-            <div class="desc">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-5 col-md-5">
-{{--                            <div class="tabulation animate-box">--}}
 
-{{--                                <!-- Nav tabs -->--}}
-{{--                                <ul class="nav nav-tabs" role="tablist">--}}
-{{--                                    <li role="presentation">--}}
-{{--                                        <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Bateau</a>--}}
-{{--                                    </li>--}}
-{{--                                </ul>--}}
 
-{{--                                <!-- Tab panes -->--}}
-{{--                                <div class="tab-content">--}}
-{{--                                    <div role="tabpanel" class="tab-pane active" id="hotels">--}}
-{{--                                        <div class="row">--}}
-{{--                                            <form action="{{ url('booking-boat') }}" method="POST">--}}
-{{--                                                @csrf--}}
-{{--                                                <div class="col-xxs-12 col-xs-6 mt">--}}
-{{--                                                    <div class="input-field">--}}
-{{--                                                        <label for="name">Nom Complet</label>--}}
-{{--                                                        <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom complet"/>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="col-xxs-12 col-xs-6 mt">--}}
-{{--                                                    <div class="input-field">--}}
-{{--                                                        <label for="email">Email</label>--}}
-{{--                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Votre email"/>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="col-xxs-12 col-xs-6 mt">--}}
-{{--                                                    <div class="input-field">--}}
-{{--                                                        <label for="from-place">De</label>--}}
-{{--                                                        <input type="text" class="form-control" name="from" id="from-place" placeholder="Los Angeles, USA"/>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="col-xxs-12 col-xs-6 mt">--}}
-{{--                                                    <div class="input-field">--}}
-{{--                                                        <label for="to-place">Vers</label>--}}
-{{--                                                        <input type="text" class="form-control" name="to" id="to-place" placeholder="Tokyo, Japan"/>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="col-xxs-12 col-xs-6 mt alternate">--}}
-{{--                                                    <div class="input-field">--}}
-{{--                                                        <label for="date-start">Arrivée</label>--}}
-{{--                                                        <input type="text" class="form-control" name="datestart" id="date-start" placeholder="mm/dd/yyyy"/>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="col-xxs-12 col-xs-6 mt alternate">--}}
-{{--                                                    <div class="input-field">--}}
-{{--                                                        <label for="date-end">Départ</label>--}}
-{{--                                                        <input type="text" class="form-control" name="dateend" id="date-end" placeholder="mm/dd/yyyy"/>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="col-xxs-12 col-xs-6 mt">--}}
-{{--                                                    <section>--}}
-{{--                                                        <label for="adult">Adultes</label>--}}
-{{--                                                        <select class="cs-select cs-skin-border" name="adult">--}}
-{{--                                                            @for($i = 1; $i<11; $i++)--}}
-{{--                                                                <option value="{{$i}}">{{$i}}</option>--}}
-{{--                                                            @endfor--}}
-{{--                                                        </select>--}}
-{{--                                                    </section>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="col-xxs-12 col-xs-6 mt">--}}
-{{--                                                    <section>--}}
-{{--                                                        <label for="child">Enfants</label>--}}
-{{--                                                        <select class="cs-select cs-skin-border" name="child">--}}
-{{--                                                            @for($i = 0; $i<11; $i++)--}}
-{{--                                                                <option value="{{$i}}">{{$i}}</option>--}}
-{{--                                                            @endfor--}}
-{{--                                                        </select>--}}
-{{--                                                    </section>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="col-xs-12">--}}
-{{--                                                    <input type="submit" class="btn btn-primary btn-block" value="Valider">--}}
-{{--                                                </div>--}}
-{{--                                            </form>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-
-{{--                            </div>--}}
-
-                        </div>
-
-                        <div class="desc2 animate-box">
-                            <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1" style="text-align: center">
-                                <h2>@lang('message.slidermsg1')</h2>
-                                <h2>@lang('message.slidermsg2')</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" style="font-size: 1.7em !important; text-align: center;margin-top: 50px">
-<<<<<<< HEAD
-                        <a href="{{ url(app()->getLocale(),'bateaux') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">Explorer nos voyages en bateau</a>
-                        <a href="{{ url(app()->getLocale(),'footballcamps') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">Explorer nos Stage Football</a>
-=======
-                        <a href="{{ url(app()->getLocale(),'bateaux') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">@lang('button.homebateau')</a>
-                        <a href="{{ url(app()->getLocale(),'footballcamps') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">@lang('button.homefootcump')</a>
->>>>>>> f53aa7d6006b96d7363f23ac03237a2de14c2e9e
-                    </div>
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="{{ asset('images/slider4.jpg') }}" />
+                <div style="position:absolute;top:30px;left:30px;width:480px;height:130px;z-index:0;background-color:rgba(255,255,255,0.8);font-size:40px;font-weight:300;color:#000000;line-height:60px;padding:5px;box-sizing:border-box;">
+                    @lang('message.slidermsg1')
+                    @lang('message.slidermsg2')
+                </div>
+            </div>
+            <div>
+                <img data-u="image" src="{{ asset('images/slider3.jpg') }}" />
+                <div style="position:absolute;top:30px;left:30px;width:480px;height:130px;z-index:0;background-color:rgba(255,255,255,0.8);font-size:40px;font-weight:300;color:#000000;line-height:60px;padding:5px;box-sizing:border-box;">
+                    @lang('message.slidermsg1')
+                    @lang('message.slidermsg2')
+                </div>
+                <div style="position:relative;top:400px;width:320px;height:130px;margin:0 auto;z-index:0;font-size:20px;color:#000000;line-height:38px;padding:5px;box-sizing:border-box;">
+                    <a href="{{ url(app()->getLocale(),'bateaux') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">@lang('button.homebateau')</a>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" src="{{ asset('images/slider1.jpg') }}" />
+                <div style="position:absolute;top:30px;left:30px;width:480px;height:130px;z-index:0;background-color:rgba(255,255,255,0.8);font-size:40px;font-weight:300;color:#000000;line-height:60px;padding:5px;box-sizing:border-box;">
+                    @lang('message.slidermsg1')
+                    @lang('message.slidermsg2')
+                </div>
+                <div style="position:relative;top:400px;width:320px;height:130px;margin:0 auto;z-index:0;font-size:20px;color:#000000;line-height:38px;padding:5px;box-sizing:border-box;">
+                    <a href="{{ url(app()->getLocale(),'footballcamps') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">@lang('button.homefootcump')</a>
                 </div>
             </div>
         </div>
-
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
     </div>
-
-
-
 
 
 <div id="fh5co-tours" class="fh5co-section-gray">
