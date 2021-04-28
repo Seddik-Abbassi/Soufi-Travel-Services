@@ -32,7 +32,7 @@
                     @lang('message.slidermsg1')
                     @lang('message.slidermsg2')
                 </div>
-                <div style="position:relative;top:400px;width:320px;height:130px;margin:0 auto;z-index:0;font-size:20px;color:#000000;line-height:38px;padding:5px;box-sizing:border-box;">
+                <div style="position:relative;top:400px;width:280px;height:130px;margin:0 auto;z-index:0;font-size:20px;color:#000000;line-height:38px;padding:5px;box-sizing:border-box;">
                     <a href="{{ url(app()->getLocale(),'footballcamps') }}" class="btn btn-success" style="font-size: 0.6em !important;font-weight: bold">@lang('button.homefootcump')</a>
                 </div>
             </div>

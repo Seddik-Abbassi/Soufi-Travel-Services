@@ -104,6 +104,8 @@ class BateauxController extends Controller
         $child = htmlentities($request->child);
         $name = htmlentities($request->name);
         $email = htmlentities($request->email);
+        $radiotrip = htmlentities($request->radiotrip);
+        $moyen = htmlentities($request->moyen);
 
 
 
@@ -127,7 +129,7 @@ class BateauxController extends Controller
             $mail->isHTML(true);
 
             $mail->Subject = "Booking demand from : ".$name;
-            $mail->Body    = "<span style='font-size: 1.3em;font-weight: bold'> $name ($email) want to travel :</span><p>From $from to $to</p><p>Arrivée : $datestart - Départ : $dateend</p><p>Adultes  : $adult - Enfants : $child</p>";
+            $mail->Body    = "<span style='font-size: 1.3em;font-weight: bold'> $name ($email) want to travel : $radiotrip</span><p>From $from to $to</p><p>Arrivée : $datestart - Départ : $dateend</p><p>Adultes  : $adult - Enfants : $child</p><p>Moyen de transport  : $moyen</p>";
 
             // $mail->AltBody = plain text version of email body;
 

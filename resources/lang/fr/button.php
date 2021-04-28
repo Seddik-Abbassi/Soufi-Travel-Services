@@ -12,6 +12,6 @@ return [
     |
     */
 
-    'homebateau' => 'Explorer nos voyages en ferry.',
-    'homefootcump' => 'Explorer nos Stage Football.',
+    'homebateau' => 'EXPLORER NOS TRAVERSÉES EN FERRY',
+    'homefootcump' => 'EXPLORER NOS STAGES FOOTBALL',
 ];
