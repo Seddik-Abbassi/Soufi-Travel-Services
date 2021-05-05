@@ -105,6 +105,14 @@
                                                     </select>
                                                 </section>
                                             </div>
+                                            <div class="col-xs-12" style="margin-top: 15px">
+                                                <label for="longueur">Longueur</label>
+                                                <input type="text" class="form-control" name="longueur" placeholder="exemple 4.5m"/>
+                                                <label for="hauteur">Hauteur</label>
+                                                <input type="text" class="form-control" name="hauteur" placeholder="exemple 1.5m"/>
+                                                <label for="largeur">Largeur</label>
+                                                <input type="text" class="form-control" name="largeur" placeholder="exemple 1.5m"/>
+                                            </div>
                                             <div class="col-xs-12" style="margin-top: 20px">
                                                 <input type="submit" class="btn btn-primary btn-block" value="Valider">
                                             </div>
@@ -129,7 +137,7 @@
     </div>
     <br>
     <br>
-    <div id="fh5co-tours" class="fh5co-section-gray">
+    <div id="fh5co-tours" class="fh5co-section-gray" style="margin-top: 250px">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">

@@ -201,8 +201,7 @@
                     <li class="one-half text-center">
                         <div class="title-bg">
                             <div class="case-studies-summary">
-                                <h2>Destinations les plus populaires</h2>
-                                <span><a href="#">Voir toutes les destinations</a></span>
+                                <h2>@lang('message.messagemostfamous')</h2>
                             </div>
                         </div>
                     </li>
@@ -251,7 +250,7 @@
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2>Clients satisfaits</h2>
+                <h2>@lang('message.titleclient')</h2>
             </div>
         </div>
         <div class="row">

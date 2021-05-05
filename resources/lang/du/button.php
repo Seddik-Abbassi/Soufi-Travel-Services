@@ -12,6 +12,6 @@ return [
     |
     */
 
-    'homebateau' => 'EXPLORE OUR FERRY TRIPS',
-    'homefootcump' => 'EXPLORE OUR FOOTBALL CAMPS',
+    'homebateau' => 'ENTDECKEN SIE UNSERE FÄHRENDREISEN',
+    'homefootcump' => 'Entdecken Sie unsere Fußballcamps',
 ];
