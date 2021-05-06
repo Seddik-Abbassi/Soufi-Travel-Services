@@ -35,7 +35,7 @@
                                                     </div>
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="radiotrip" id="inlineRadio3" value="Voyage aller simple">
-                                                        <label class="form-check-label" for="inlineRadio2">Voyage aller simple</label>
+                                                        <label class="form-check-label" for="inlineRadio2">Détails différents</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-xxs-12 col-xs-6 mt">
@@ -97,15 +97,23 @@
                                             <div class="col-xs-12">
                                                 <section>
                                                     <label for="moyen">Votre moyen de Transport</label>
-                                                    <select class="cs-select cs-skin-border" name="moyen">
+                                                    <select class="cs-select cs-skin-border"  id="moyenid" name="moyen">
                                                             <option value="0">Quel est votre moyen de Transport?</option>
-                                                            <option value="A pied">A pied</option>
-                                                            <option value="Moto">Moto</option>
-                                                            <option value="Voiture avec charge de 70cm max">Voiture avec charge de 70cm max</option>
+                                                            <option value="Passager piéton">Passager piéton</option>
+                                                            <option value="Vélo">Vélo</option>
+                                                            <option value="Voiture" class="showmark">Voiture</option>
+                                                            <option value="Camping-car" class="showmark">Camping-car</option>
+                                                            <option value="Moto" class="showmark">Moto</option>
+                                                            <option value="Minibus" class="showmark">Minibus</option>
+                                                            <option value="Fourgonnette" class="showmark">Fourgonnette</option>
                                                     </select>
                                                 </section>
                                             </div>
-                                            <div class="col-xs-12" style="margin-top: 15px">
+                                            <div class="col-xs-12 hidden" id="markpart" style="margin-top: 15px">
+                                                <label for="marque">Marque</label>
+                                                <input type="text" class="form-control" name="marque" placeholder="Marque"/>
+                                                <label for="modele">Modèle</label>
+                                                <input type="text" class="form-control" name="modele" placeholder="Modèle"/>
                                                 <label for="longueur">Longueur</label>
                                                 <input type="text" class="form-control" name="longueur" placeholder="exemple 4.5m"/>
                                                 <label for="hauteur">Hauteur</label>

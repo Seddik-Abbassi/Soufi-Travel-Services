@@ -224,6 +224,7 @@
 
 <!-- Main JS -->
 <script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('js/style.js') }}"></script>
 <script type="text/javascript">jssor_1_slider_init();</script>
 </body>
 </html>
