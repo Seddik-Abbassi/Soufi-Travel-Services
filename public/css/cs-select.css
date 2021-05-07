@@ -1,5 +1,5 @@
 /* Default custom select styles */
-div.cs-select {
+div.cs-select, div.cs-select-2 {
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
@@ -20,7 +20,7 @@ div.cs-select:focus {
 	outline: none; /* For better accessibility add a style for this in your skin */
 }
 
-.cs-select select {
+.cs-select select , .cs-select-2 select{
 	display: none;
 }
 
@@ -95,7 +95,7 @@ div.cs-active {
 	color: #777;
 }
 
-.cs-select ul li.cs-focus span {
+.cs-select ul li.cs-focus span, .cs-select-2 ul li.cs-focus span {
 	background-color: #ddd;
 }
 

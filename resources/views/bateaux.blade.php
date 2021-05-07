@@ -97,7 +97,7 @@
                                             <div class="col-xs-12">
                                                 <section>
                                                     <label for="moyen">Votre moyen de Transport</label>
-                                                    <select class="cs-select cs-skin-border"  id="moyenid" name="moyen">
+                                                    <select class="cs-select cs-skin-border" id="moyenid" name="moyen">
                                                             <option value="0">Quel est votre moyen de Transport?</option>
                                                             <option value="Passager piéton">Passager piéton</option>
                                                             <option value="Vélo">Vélo</option>
