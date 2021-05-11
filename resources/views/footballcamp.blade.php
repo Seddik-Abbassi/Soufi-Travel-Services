@@ -44,7 +44,7 @@
                     <img class="img-responsive" src="{{ $footballcamp->thumbnail }}" alt="travel">
                 </div>
                 <div class="col-md-12 text-center animate-box" style="margin-top: 50px">
-                    <p><a class="btn btn-primary btn-outline btn-lg" href="{{ url(app()->getLocale(),'/footballcamps') }}">Tous les offres&nbsp;<i class="icon-arrow-right22"></i></a></p>
+                    <p><a class="btn btn-primary btn-outline btn-lg" href="{{ url(app()->getLocale(),'footballcamps') }}">Tous les offres&nbsp;<i class="icon-arrow-right22"></i></a></p>
                 </div>
 
             </div>
